@@ -1,8 +1,8 @@
 import React from 'react'
-import Input from '../components/UI/Input/Input'
-import Button from '../components/UI/Button/Button'
+import Input from '../../components/UI/Input/Input'
+import Button from '../../components/UI/Button/Button'
 import { useContext } from 'react'
-import { AuthContext } from '../context'
+import { AuthContext } from '../../context'
 import { useNavigate } from 'react-router-dom'
 
 export default function Login() {
@@ -14,7 +14,7 @@ export default function Login() {
     e.preventDefault()
     setIsAuth(true)
     localStorage.setItem('auth', 'true')
-    router(`/posts`)
+    router(`/main`)
   }
 
   return (
