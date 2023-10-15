@@ -20,7 +20,7 @@ function Navbar() {
                     <Link to="/">Main</Link>
                     <Link to="/about">About</Link>
                 </div>
-            {/* <Button onClick={logout}>Выйти</Button> */}
+            <Button onClick={logout}>Выйти</Button>
             </div>
     )
 

@@ -37,13 +37,3 @@ export default function AppRouter() {
       </>
   )
 }
-
-
-
-
-
-
-{/* <Route path="about" element={<About />} />
-          <Route path="posts" element={<Posts />} />
-          <Route path="post/:id" element={<PostsIdPage />} />
-          <Route path="/*" element={<ErrorPage />} /> */}
