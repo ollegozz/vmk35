@@ -15,13 +15,18 @@ function Navbar() {
     }
 
     return (
-            <div className='navbar'>                
-                <div className='navbar__links'>
-                    <Link to="/">Main</Link>
-                    <Link to="/about">About</Link>
-                </div>
-            <Button onClick={logout}>Выйти</Button>
+        <div className='navbar'>
+            <div className='navbar__links'>
+                <Link to="/">Главная</Link>
+                <Link to="/about">О компании</Link>
+                <Link to="/catalog">Каталог</Link>
+                <Link to="/news">Новости</Link>
+                <Link to="/sales-points">Точки продаж</Link>
+                <Link to="/partners">Партнерам</Link>
+                <Link to="/contacts">Контакты</Link>
             </div>
+            <Button onClick={logout}>Выйти</Button>
+        </div>
     )
 
 }

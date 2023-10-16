@@ -12,6 +12,11 @@ import Contacts from "../pages/Contacts/Contacts";
 export const privateRoutes = [
     { path: "/", element: <Main /> },
     { path: "/about", element: <About /> },
+    { path: "/catalog", element: <Catalog/> },
+    { path: "/news", element: <News/> },
+    { path: "/sales-points", element: <SalesPoints /> },
+    { path: "/partners", element: <Partners /> },
+    { path: "/contacts", element: <Contacts /> },
     { path: "/*", element: <ErrorPage /> }
 ]
 
