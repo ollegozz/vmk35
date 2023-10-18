@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import '../../../App.css';
 import { AuthContext } from '../../../context';
 import Button from '../Button/Button';
+import css from './navbar.module.css'
 
 function Navbar() {
 
@@ -15,8 +16,8 @@ function Navbar() {
     }
 
     return (
-        <div className='navbar'>
-            <div className='navbar__links'>
+        <div className={css.navbar}>
+            <div className={css.navbar__links}>
                 <Link to="/">Главная</Link>
                 <Link to="/about">О компании</Link>
                 <Link to="/catalog">Каталог</Link>
@@ -25,7 +26,9 @@ function Navbar() {
                 <Link to="/partners">Партнерам</Link>
                 <Link to="/contacts">Контакты</Link>
             </div>
-            <Button onClick={logout}>Выйти</Button>
+            <div className={css.button}>
+                <Button onClick={logout}>Выйти</Button>
+            </div>
         </div>
     )
 
