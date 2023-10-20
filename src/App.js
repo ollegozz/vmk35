@@ -4,8 +4,7 @@ import './App.css';
 import Navbar from './components/UI/Navbar/Navbar';
 import AppRouter from './components/AppRouter'
 import { AuthContext } from './context';
-import Main from './pages/Main/Main';
-
+import Footer from './components/UI/Footer/Footer';
 function App() {
 
   const [isAuth, setIsAuth] = useState(false)
@@ -27,7 +26,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <AppRouter />
-        {/* <Main /> */}
+        <Footer/>
       </BrowserRouter>
     </AuthContext.Provider>
   );

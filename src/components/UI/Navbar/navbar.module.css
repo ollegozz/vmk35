@@ -1,21 +1,21 @@
 .navbar {
     display: flex;
-    height: 60px;
-    align-items: center;
+    height: 60px;    
     justify-content: space-around;
-    
+    background: rgb(13, 78, 104);
+    align-items: center;
 }
 
-.navbar__links {
-    display: flex; 
-    padding: 5px;
+.navbar__links {   
+    display: flex;     
     flex: 0 1 80%; 
-    justify-content: center;   
+    padding: 5px;
+    /* justify-content: center;   */
 }
 
-
-.navbar__links a {
+.navbar__link {
     margin: 0 5px;
+    color: rgb(255, 255, 255);
     
 }
 
