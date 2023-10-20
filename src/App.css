@@ -1,8 +1,5 @@
 .App {
   text-align: center;  
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;  
 }
 
 a {
@@ -11,9 +8,10 @@ a {
 }
 
 * {
-  padding: 0;  
-  margin: 0;  
+  padding: 0 auto;  
+  margin: 0 auto;  
   box-sizing: border-box;  
   line-height: 1;
   font-family: Rubik;
 }
+
