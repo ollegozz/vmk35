@@ -16,9 +16,8 @@ function Navbar() {
     }
 
     return (
-        <div className={css.navbar}>
+        <nav className={css.navbar}>
             <div className={css.navbar__links}>
-                <div className={css.logo}>ВМК</div>
                 <div className={css.navbar__link}><Link to="/">Главная</Link></div>
                 <div className={css.navbar__link}><Link to="/about">О компании</Link></div>
                 <div className={css.navbar__link}><Link to="/catalog">Каталог</Link></div>
@@ -29,8 +28,11 @@ function Navbar() {
             </div>
             <div className={css.button}>
                 <Button onClick={logout}>Выйти</Button>
+                <div className={css.burger_btn}>
+                    <span/>
+                </div>
             </div>
-        </div>
+        </nav>
     )
 
 }
