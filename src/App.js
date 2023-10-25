@@ -33,7 +33,7 @@ function App() {
   //   if (isBurger) {
   //     setIsAuth(true)
   //   }
-  // }, [])
+  // }, [isBurger])
 
   useEffect(() => {
     if (localStorage.getItem('auth')) {

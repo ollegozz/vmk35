@@ -15,6 +15,12 @@ function Navbar() {
         localStorage.removeItem('auth')
     }
 
+  const test = (e) => {
+        // onClick = {() => setIsBurger(!isBurger)
+        setIsBurger(!isBurger)
+        console.log(isBurger);
+        console.log(e.target);
+}
   
 
     return (
@@ -25,8 +31,8 @@ function Navbar() {
                 )}                
             </div>
             <div className={css.button}>
-                <Button onClick={logout}>Выйти</Button>
-                <div className={css.burger_btn} onClick={() => setIsBurger(!isBurger)}>
+                <div><Button onClick={logout}>Выйти</Button></div>
+                <div className={css.burger_btn} onClick={test}>
                     <span/>
                 </div>
             </div>
