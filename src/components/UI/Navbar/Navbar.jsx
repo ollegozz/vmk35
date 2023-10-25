@@ -8,12 +8,14 @@ import css from './navbar.module.css'
 
 function Navbar() {
 
-    const { isAuth, setIsAuth, navItem } = useContext(AuthContext)
+    const { isAuth, setIsAuth, navItem, isBurger, setIsBurger } = useContext(AuthContext)
 
     const logout = () => {
         setIsAuth(false)
         localStorage.removeItem('auth')
     }
+
+  
 
     return (
         <nav className={css.navbar}>
@@ -24,7 +26,7 @@ function Navbar() {
             </div>
             <div className={css.button}>
                 <Button onClick={logout}>Выйти</Button>
-                <div className={css.burger_btn}>
+                <div className={css.burger_btn} onClick={() => setIsBurger(!isBurger)}>
                     <span/>
                 </div>
             </div>
