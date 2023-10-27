@@ -8,7 +8,6 @@ import css from './burger.module.css'
 export default function Burger() {
 
     const { isAuth, navItem, isBurger } = useContext(AuthContext)
-
   
   return (
       isBurger &&

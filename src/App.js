@@ -29,12 +29,6 @@ function App() {
   }
   ]
 
-  // useEffect(() => {
-  //   if (isBurger) {
-  //     setIsAuth(true)
-  //   }
-  // }, [isBurger])
-
   useEffect(() => {
     if (localStorage.getItem('auth')) {
       setIsAuth(true)
@@ -44,8 +38,7 @@ function App() {
 
   return (
     <AuthContext.Provider value={{
-      isAuth,
-      setIsAuth,
+      isAuth, setIsAuth,
       isLoading,
       navItem,
       isBurger, setIsBurger
