@@ -1,8 +1,14 @@
 import React from 'react'
+import { useContext } from 'react';
+import { AuthContext } from '../../context';
 import css from './main.module.css'
 
 export default function Main() {
+  const {  isBurger } = useContext(AuthContext)
   return (
+    isBurger ? 
+      <div className={css.blur}></div>
+    :
     <div className={css.wrapper}>
       <h1 style={{ padding: 20 }}>MAIN</h1>
       <div style={{padding: 10}}>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio laboriosam explicabo reiciendis minima quo? Dolores libero necessitatibus exercitationem accusantium rerum quas, nulla placeat dolorem dolorum, nobis aspernatur sequi, accusamus laborum.

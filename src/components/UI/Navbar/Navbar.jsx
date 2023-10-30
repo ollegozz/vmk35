@@ -22,33 +22,29 @@ function Navbar() {
 
 
     return (
-        isBurger === false ?
-            <nav className={css.navbar}>
-                <div className={css.navbar__links}>
-                    {navItem.map(item =>
-                        <div key={item.path} className={css.navbar__link}><Link to={item.path}>{item.name}</Link></div>
-                    )}
+        <nav className={css.navbar}>
+            <div className={css.navbar__links}>
+                {navItem.map(item =>
+                    <div key={item.path} className={css.navbar__link}><Link to={item.path}>{item.name}</Link></div>
+                )}
+            </div>
+            <div className={css.button}>
+                <div><Button onClick={logout}>Выйти</Button></div>
+                <div className={css.burger_btn} onClick={test}>
+                    <span />
                 </div>
-                <div className={css.button}>
-                    <div><Button onClick={logout}>Выйти</Button></div>
-                    <div className={css.burger_btn} onClick={test}>
-                        <span />
+            </div>
+            {isBurger &&
+                <nav className={css.burger}>
+                    <div className={css.burger__links}>
+                        {navItem.map(item =>
+                            <div onClick={() => setIsBurger(!isBurger)} key={item.path} className={css.burger__link}>
+                                <Link to={item.path}>{item.name}</Link>
+                            </div>
+                        )}
                     </div>
-                </div>
-            </nav>
-            :
-            <nav className={css.burger}>
-                <div className={css.burger__links}>
-                    <div className={css.burger_btn} onClick={test}>
-                        <span />
-                    </div>
-                    {navItem.map(item =>
-                        <div onClick={() => setIsBurger(!isBurger)} key={item.path} className={css.burger__link}>
-                            <Link to={item.path}>{item.name}</Link>
-                        </div>
-                    )}
-                </div>
-            </nav>
+                </nav>}
+        </nav>
     )
 
 }
