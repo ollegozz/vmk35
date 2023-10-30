@@ -8,35 +8,47 @@ import css from './navbar.module.css'
 
 function Navbar() {
 
-    const { isAuth, setIsAuth, navItem, isBurger, setIsBurger } = useContext(AuthContext)
+    const { setIsAuth, navItem, isBurger, setIsBurger } = useContext(AuthContext)
 
     const logout = () => {
         setIsAuth(false)
         localStorage.removeItem('auth')
     }
 
-  const test = (e) => {
+    const test = (e) => {
         // onClick = {() => setIsBurger(!isBurger)
         setIsBurger(!isBurger)
-        console.log(isBurger);
-        console.log(e.target);
-}
-  
+    }
+
 
     return (
-        <nav className={css.navbar}>
-            <div className={css.navbar__links}>
-                {navItem.map(item =>  
-                    <div key={item.path} className={css.navbar__link}><Link to={item.path}>{item.name}</Link></div>
-                )}                
-            </div>
-            <div className={css.button}>
-                <div><Button onClick={logout}>Выйти</Button></div>
-                <div className={css.burger_btn} onClick={test}>
-                    <span/>
+        isBurger === false ?
+            <nav className={css.navbar}>
+                <div className={css.navbar__links}>
+                    {navItem.map(item =>
+                        <div key={item.path} className={css.navbar__link}><Link to={item.path}>{item.name}</Link></div>
+                    )}
                 </div>
-            </div>
-        </nav>
+                <div className={css.button}>
+                    <div><Button onClick={logout}>Выйти</Button></div>
+                    <div className={css.burger_btn} onClick={test}>
+                        <span />
+                    </div>
+                </div>
+            </nav>
+            :
+            <nav className={css.burger}>
+                <div className={css.burger__links}>
+                    <div className={css.burger_btn} onClick={test}>
+                        <span />
+                    </div>
+                    {navItem.map(item =>
+                        <div onClick={() => setIsBurger(!isBurger)} key={item.path} className={css.burger__link}>
+                            <Link to={item.path}>{item.name}</Link>
+                        </div>
+                    )}
+                </div>
+            </nav>
     )
 
 }

@@ -10,13 +10,7 @@ export default function Burger() {
     const { isAuth, navItem, isBurger } = useContext(AuthContext)
   
   return (
-      isBurger &&
-      <nav className={css.navbar}>
-          <div className={css.navbar__links}>
-              {navItem.map(item =>
-                  <div key={item.path} className={css.navbar__link}><Link to={item.path}>{item.name}</Link></div>
-              )}
-          </div>
-          </nav>
+      <div></div>
+      
   )
 }
