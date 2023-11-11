@@ -8,16 +8,28 @@ import css from './navbar.module.css'
 
 function Navbar() {
 
-    const { setIsAuth, navItem, isBurger, setIsBurger } = useContext(AuthContext)
+    const navItem = [{
+        path: '/', name: 'Главная'
+    }, {
+        path: '/about', name: 'О компании'
+    }, {
+        path: '/catalog', name: 'Каталог'
+    }, {
+        path: '/news', name: 'Новости'
+    }, {
+        path: '/sales-points', name: 'Точки продаж'
+    }, {
+        path: '/partners', name: 'Партнерам'
+    }, {
+        path: '/contacts', name: 'Контакты'
+    }
+    ]
+
+    const { setIsAuth, isBurger, setIsBurger } = useContext(AuthContext)
 
     const logout = () => {
         setIsAuth(false)
         localStorage.removeItem('auth')
-    }
-
-    const test = (e) => {
-        // onClick = {() => setIsBurger(!isBurger)
-        setIsBurger(!isBurger)
     }
 
 
@@ -30,7 +42,7 @@ function Navbar() {
             </div>
             <div className={css.button}>
                 <div><Button onClick={logout}>Выйти</Button></div>
-                <div className={css.burger_btn} onClick={test}>
+                <div className={css.burger_btn} onClick={() => setIsBurger(!isBurger)}>
                     <span />
                 </div>
             </div>
