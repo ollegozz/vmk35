@@ -11,23 +11,6 @@ function App() {
   const [isLoading, setIsLoading] = useState(true)
   const [isBurger, setIsBurger] = useState(false)
 
-  // const navItem = [{
-  //   path: '/', name: 'Главная'
-  // }, {
-  //   path: '/about', name: 'О компании'
-  // }, {
-  //   path: '/catalog', name: 'Каталог'
-  // }, {
-  //   path: '/news', name: 'Новости'
-  // }, {
-  //   path: '/sales-points', name: 'Точки продаж'
-  // }, {
-  //   path: '/partners', name: 'Партнерам'
-  // }, {
-  //   path: '/contacts', name: 'Контакты'
-  // }
-  // ]
-
   useEffect(() => {
     if (localStorage.getItem('auth')) {
       setIsAuth(true)

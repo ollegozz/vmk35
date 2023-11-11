@@ -8,21 +8,14 @@ import css from './navbar.module.css'
 
 function Navbar() {
 
-    const navItem = [{
-        path: '/', name: 'Главная'
-    }, {
-        path: '/about', name: 'О компании'
-    }, {
-        path: '/catalog', name: 'Каталог'
-    }, {
-        path: '/news', name: 'Новости'
-    }, {
-        path: '/sales-points', name: 'Точки продаж'
-    }, {
-        path: '/partners', name: 'Партнерам'
-    }, {
-        path: '/contacts', name: 'Контакты'
-    }
+    const navItems = [
+        { path: '/', name: 'Главная' },
+        { path: '/about', name: 'О компании' },
+        { path: '/catalog', name: 'Каталог' },
+        { path: '/news', name: 'Новости' },
+        { path: '/sales-points', name: 'Точки продаж' },
+        { path: '/partners', name: 'Партнерам' },
+        { path: '/contacts', name: 'Контакты' }
     ]
 
     const { setIsAuth, isBurger, setIsBurger } = useContext(AuthContext)
@@ -36,7 +29,7 @@ function Navbar() {
     return (
         <nav className={css.navbar}>
             <div className={css.navbar__links}>
-                {navItem.map(item =>
+                {navItems.map(item =>
                     <div key={item.path} className={css.navbar__link}><Link to={item.path}>{item.name}</Link></div>
                 )}
             </div>
@@ -49,7 +42,7 @@ function Navbar() {
             {isBurger &&
                 <nav className={css.burger}>
                     <div className={css.burger__links}>
-                        {navItem.map(item =>
+                        {navItems.map(item =>
                             <div onClick={() => setIsBurger(!isBurger)} key={item.path} className={css.burger__link}>
                                 <Link to={item.path}>{item.name}</Link>
                             </div>
