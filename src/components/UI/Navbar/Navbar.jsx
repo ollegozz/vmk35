@@ -35,7 +35,8 @@ function Navbar() {
             </div>
             <div className={css.button}>
                 <div><Button onClick={logout}>Выйти</Button></div>
-                <div className={css.burger_btn} onClick={() => setIsBurger(!isBurger)}>
+                <div className={isBurger === false ? css.burger_btn : [`${css.burger_btn} ${css.burger_btn_close}`]}
+                    onClick={() => setIsBurger(!isBurger)}>
                     <span />
                 </div>
             </div>

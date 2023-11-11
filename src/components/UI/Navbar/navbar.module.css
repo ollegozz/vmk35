@@ -31,7 +31,7 @@
     display: flex;
     flex: 0 1 20%;
     align-items: center;
-    cursor: pointer;    
+    cursor: pointer;
 }
 
 @media screen and (max-width: 800px) {
@@ -49,6 +49,7 @@
         width: 20px;
         height: 2px;
         background-color: black;
+        transition: all 0.2s;
     }
 
     .burger_btn span {
@@ -57,6 +58,7 @@
         width: 20px;
         height: 2px;
         background-color: black;
+        transition: all 0.2s;
     }
 
     .burger_btn:after {
@@ -66,11 +68,38 @@
         width: 20px;
         height: 2px;
         background-color: black;
+        transition: all 0.2s;
     }
 
-        .navbar__link {
-            display: none;
-        }
+    .navbar__link {
+        display: none;
+    }
+
+    .burger_btn_close {
+        position: relative;
+        width: 20px;
+        height: 25px;
+        z-index: 50;
+    }
+
+    .burger_btn_close:before {        
+        top: 11px;
+        transform: rotate(45deg);
+        width: 30px;
+        transition: all 0.2s;
+    }
+
+    .burger_btn_close span {
+        display: none;
+    
+    }
+
+    .burger_btn_close:after {
+        bottom: 12px;
+        transform: rotate(-45deg);
+        width: 30px;
+        transition: all 0.2s;
+    }
 }
 
 
