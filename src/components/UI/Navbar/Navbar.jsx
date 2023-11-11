@@ -35,13 +35,12 @@ function Navbar() {
             </div>
             <div className={css.button}>
                 <div><Button onClick={logout}>Выйти</Button></div>
-                <div className={isBurger === false ? css.burger_btn : [`${css.burger_btn} ${css.burger_btn_close}`]}
+                <div className={isBurger ? [`${css.burger_btn} ${css.burger_btn_close}`] : css.burger_btn}
                     onClick={() => setIsBurger(!isBurger)}>
                     <span />
                 </div>
-            </div>
-            {isBurger &&
-                <nav className={css.burger}>
+            </div>            
+                <div className={isBurger === false ? css.burger : css.burger_active}>
                     <div className={css.burger__links}>
                         {navItems.map(item =>
                             <div onClick={() => setIsBurger(!isBurger)} key={item.path} className={css.burger__link}>
@@ -49,7 +48,7 @@ function Navbar() {
                             </div>
                         )}
                     </div>
-                </nav>}
+                </div>                
         </nav>
     )
 
