@@ -25,7 +25,6 @@ function Navbar() {
         localStorage.removeItem('auth')
     }
 
-
     return (
         <nav className={css.navbar}>
             <div className={css.navbar__links}>

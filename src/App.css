@@ -15,3 +15,15 @@ a {
   font-family: Rubik;
 }
 
+
+/* .blur {
+  background: rgba(255, 255, 255, .9);
+} */
+
+.wrapper {
+  padding-top: 70px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

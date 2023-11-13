@@ -101,18 +101,20 @@
     }
 }
 
+.burger {
+    position: absolute;
+    transform: translateX(-150%);
+    transition: all 0.3s;
+    height: 100%;
+    width: 100%;
+}
 
 @media screen and (max-width: 800px) {
-    .burger {
-        position: absolute;
-        transform: translateX(-150%);
-        transition: all 0.3s;
-    }
 
     .burger_active {
         padding: 20px;
         position: absolute;
-        background: rgba(255, 255, 255, .8);
+        background: rgba(255, 255, 255, .9);
         height: 100%;
         width: 100%;
         transform: translateX(0);
@@ -122,6 +124,8 @@
     .burger__links {
         text-align: center;
         margin-top: 50px;
+        background: rgb(255, 255, 255);
+        height: 100vh;
     }
 
     .burger__link {
