@@ -11,12 +11,12 @@ function App() {
   const [isLoading, setIsLoading] = useState(true)
   const [isBurger, setIsBurger] = useState(false)
 
-  useEffect(() => {
-    if (localStorage.getItem('auth')) {
-      setIsAuth(true)
-    }
-    setIsLoading(false)
-  }, [])
+  // useEffect(() => {
+  //   if (localStorage.getItem('auth')) {
+  //     setIsAuth(true)
+  //   }
+  //   setIsLoading(false)
+  // }, [])
 
   return (
     <AuthContext.Provider value={{

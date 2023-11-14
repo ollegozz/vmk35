@@ -6,34 +6,42 @@ import { privateRoutes, publicRoutes } from '../router/router';
 import Loader from './UI/Loader/Loader';
 
 export default function AppRouter() {
-  const { isAuth, isLoading } = useContext(AuthContext)
+  const { isAuth } = useContext(AuthContext)
 
-  if (isLoading) {
-    return <Loader/>
-  }
+  // if (isLoading) {
+  //   return <Loader/>
+  // }
 
   return (
-    isAuth ?
-      <>
-        {/* <Navigate to="/posts" /> */}
-        <Routes>
-          {privateRoutes.map(route =>
-            <Route path={route.path}
-              element={route.element}
-              key={route.path} />
-          )}
-        </Routes>
-      </>
-      : 
-      <>
-        <Navigate to="/login" />
-        <Routes>
+  //   isAuth ?
+  //     <>
+  //       {/* <Navigate to="/posts" /> */}
+  //       <Routes>
+  //         {privateRoutes.map(route =>
+  //           <Route path={route.path}
+  //             element={route.element}
+  //             key={route.path} />
+  //         )}
+  //       </Routes>
+  //     </>
+  //     : 
+  //     <>
+  //       <Navigate to="/login" />
+  //       <Routes>
+  //         {publicRoutes.map(route =>
+  //           <Route path={route.path}
+  //             element={route.element}
+  //             key={route.path} />
+  //         )}
+  //       </Routes>
+  //     </>
+  // )
+    <Routes>
           {publicRoutes.map(route =>
             <Route path={route.path}
               element={route.element}
               key={route.path} />
           )}
         </Routes>
-      </>
   )
 }

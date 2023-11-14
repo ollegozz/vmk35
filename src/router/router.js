@@ -1,5 +1,4 @@
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
-import Login from "../pages/Login/Login";
 import Main from "../pages/Main/Main";
 import About from "../pages/About/About";
 import Catalog from "../pages/Catalog/Catalog";
@@ -23,6 +22,10 @@ export const privateRoutes = [
 export const publicRoutes = [
     { path: "/", element: <Main /> },
     { path: "/about", element: <About /> },
-    { path: "/login", element: <Login /> },
-    { path: "/*", element: <ErrorPage /> },
+    { path: "/catalog", element: <Catalog /> },
+    { path: "/news", element: <News /> },
+    { path: "/sales-points", element: <SalesPoints /> },
+    { path: "/partners", element: <Partners /> },
+    { path: "/contacts", element: <Contacts /> },
+    { path: "/*", element: <ErrorPage /> }
 ]

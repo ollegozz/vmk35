@@ -3,7 +3,7 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import '../../../App.css';
 import { AuthContext } from '../../../context';
-import Button from '../Button/Button';
+// import Button from '../Button/Button';
 import css from './navbar.module.css'
 
 function Navbar() {
@@ -18,12 +18,7 @@ function Navbar() {
         { path: '/contacts', name: 'Контакты' }
     ]
 
-    const { setIsAuth, isBurger, setIsBurger } = useContext(AuthContext)
-
-    const logout = () => {
-        setIsAuth(false)
-        localStorage.removeItem('auth')
-    }
+    const { isBurger, setIsBurger } = useContext(AuthContext)
 
     return (
         <nav className={css.navbar}>
@@ -33,7 +28,6 @@ function Navbar() {
                 )}
             </div>
             <div className={css.button}>
-                <div><Button onClick={logout}>Выйти</Button></div>
                 <div className={isBurger ? [`${css.burger_btn} ${css.burger_btn_close}`] : css.burger_btn}
                     onClick={() => setIsBurger(!isBurger)}>
                     <span />
