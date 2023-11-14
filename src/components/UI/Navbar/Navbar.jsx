@@ -18,7 +18,7 @@ function Navbar() {
         { path: '/contacts', name: 'Контакты' }
     ]
 
-    const { isBurger, setIsBurger } = useContext(AuthContext)
+    const { showBurger, setShowBurger } = useContext(AuthContext)
 
     return (
         <nav className={css.navbar}>
@@ -26,17 +26,18 @@ function Navbar() {
                 {navItems.map(item =>
                     <div key={item.path} className={css.navbar__link}><Link to={item.path}>{item.name}</Link></div>
                 )}
+                <h2 className={css.logo}>Text LOGO</h2>
             </div>
             <div className={css.button}>
-                <div className={isBurger ? [`${css.burger_btn} ${css.burger_btn_close}`] : css.burger_btn}
-                    onClick={() => setIsBurger(!isBurger)}>
+                <div className={showBurger ? [`${css.burger_btn} ${css.burger_btn_close}`] : css.burger_btn}
+                    onClick={() => setShowBurger(!showBurger)}>
                     <span />
                 </div>
             </div>            
-                <div className={isBurger === false ? css.burger : css.burger_active}>
+                <div className={showBurger === false ? css.burger : css.burger_active}>
                     <div className={css.burger__links}>
                         {navItems.map(item =>
-                            <div onClick={() => setIsBurger(!isBurger)} key={item.path} className={css.burger__link}>
+                            <div onClick={() => setShowBurger(!showBurger)} key={item.path} className={css.burger__link}>
                                 <Link to={item.path}>{item.name}</Link>
                             </div>
                         )}

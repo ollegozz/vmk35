@@ -10,9 +10,12 @@
 
 .navbar__links {
     display: flex;
-    flex: 0 1 80%;
     padding: 5px;
     justify-content: center;
+}
+
+.logo {
+    display: none;
 }
 
 .navbar__link {
@@ -20,7 +23,6 @@
     color: rgb(255, 255, 255);
     align-items: center;
     display: flex;
-
 }
 
 .navbar__link:hover {
@@ -28,13 +30,27 @@
 }
 
 .button {
-    display: flex;
-    flex: 0 1 20%;
-    align-items: center;
-    cursor: pointer;
+    display: none;
 }
 
 @media screen and (max-width: 800px) {
+    .navbar__links {
+        flex: 0 1 90%;
+        display: block;
+    }
+
+    .button {
+        display: flex;
+        flex: 0 1 10%;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .logo {
+        display: flex;
+        padding: 0 10px;
+    }
+
     .burger_btn {
         position: relative;
         width: 20px;

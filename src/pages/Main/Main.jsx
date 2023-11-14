@@ -5,7 +5,7 @@ import '../../App.css';
 import css from './main.module.css'
 
 export default function Main() {
-  const {  isBurger } = useContext(AuthContext)
+  const {  showBurger } = useContext(AuthContext)
   
   
   return (    
