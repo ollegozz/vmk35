@@ -1,17 +1,18 @@
 .navbar {
     display: flex;
     height: 60px;
-    justify-content: space-around;
     background: rgb(13, 78, 104);
     align-items: center;
     position: fixed;
     width: 100%;
+    justify-content: right;
 }
 
 .navbar__links {
     display: flex;
     padding: 5px;
     justify-content: center;
+    margin-right: 20px;
 }
 
 .logo {
@@ -21,8 +22,6 @@
 .navbar__link {
     margin: 0 5px;
     color: rgb(255, 255, 255);
-    align-items: center;
-    display: flex;
 }
 
 .navbar__link:hover {
